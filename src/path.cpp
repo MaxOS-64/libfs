@@ -176,8 +176,10 @@ string Path::top_directory(const string& path) {
 	// Find the first /
 	int first_slash = -1;
 	for (size_t i = 0; i < path.length(); i++)
-		if (path[i] == '/')
+		if (path[i] == '/') {
 			first_slash = i;
+		    break;
+		}
 
 	// Make sure there was a slash to split
 	if (first_slash == -1)

@@ -4,6 +4,6 @@ path /server/
 
 service fileserver {
 
-    rpc void mount_ramdisk(string endpoint);
+    rpc void mount_ramdisk(string endpoint, uint32 size);
 
 }
