@@ -11,11 +11,12 @@ namespace LibFS {
 
         const char* root = "/0/os/";
         uint64_t handle = open_directory(root);
+
+        if (handle == 0)
+            return false;
+
         close_directory(handle);
-
-        // Positive handle means was ready
-        return handle != 0;
-
+        return true;
     }
 
     void wait_for_full_fs() {
